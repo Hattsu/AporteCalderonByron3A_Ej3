@@ -1,6 +1,7 @@
 using System;
 namespace Aporte_CalderonByron3A_Ej3
 {
+    //Use una interfaz por motivos de prácticas, es un poco irrelevante su aplicaión en este código ya que su único beneficio es la comodidad al usarlo
     class Cliente:IImprimir
     {   
         public string Nombre {set; get;}
@@ -14,7 +15,7 @@ namespace Aporte_CalderonByron3A_Ej3
             this.Direccion = direccion;
             this.Cedula_identidad = cedula_identidad;
         }
-
+        //Método para imprimir todo
         public void Mostrar()
         {
             Console.WriteLine(" Ficha: Cliente");
