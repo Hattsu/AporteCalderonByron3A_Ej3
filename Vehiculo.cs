@@ -1,6 +1,7 @@
 using System;
 namespace Aporte_CalderonByron3A_Ej3
 {
+    //Interfaz usada por motivos de prácticas, es un poco irrelevante su aplicación en este código ya que su único beneficio es la comodidad al usarlo
     class Vehiculo:IImprimir2
     {
         public string Marca {set; get;}
@@ -14,10 +15,12 @@ namespace Aporte_CalderonByron3A_Ej3
             this.Año_fabricacion= año_fabricacion;
             this.Precio_venta = precio_venta;
         }
+        //Método para cálcular los valores del precio en base a los impuestos, que será aumentando consecuentemente por dichos valores
         public void Calcular()
         {
             double  Impuesto_ambiente = 0, Impuesto_iva = 0;
             int porcentaje=0;
+            // "If" que será usado para aumentar el valor del impuesto ambiental en un 2% o un 10% dependiendo del año de fabricaion del vehiculo
             if(Año_fabricacion<=2015)
             {
                 Impuesto_ambiente = Precio_venta + (Precio_venta*0.10);
@@ -29,6 +32,7 @@ namespace Aporte_CalderonByron3A_Ej3
             Impuesto_iva = Impuesto_ambiente + (Impuesto_ambiente*0.12);
             Mostrar(Impuesto_ambiente, Impuesto_iva, porcentaje);
         }
+        //Método para imprimir todo
         public void Mostrar(double Impuesto_ambiente, double Impuesto_iva, int porcentaje)
         {
             Console.WriteLine(" Ficha: Vehiculo");
