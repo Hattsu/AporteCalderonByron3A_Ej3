@@ -1,7 +1,7 @@
 using System;
 namespace Aporte_CalderonByron3A_Ej3
 {
-    //Use una interfaz por motivos de prácticas, es un poco irrelevante su aplicaión en este código ya que su único beneficio es la comodidad al usarlo
+    //Use una interfaz por motivos de prácticas, es un poco irrelevante su aplicación en este código ya que su único beneficio es la comodidad al usarlo
     class Cliente:IImprimir
     {   
         public string Nombre {set; get;}
